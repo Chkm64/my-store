@@ -6,7 +6,7 @@ const { logErrors, errorHandler, boomHandler } = require('./middlewares/error.ha
 
 const app = express();
 // Evaluando la variable de entorno
-const port = process.env.ṔORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
