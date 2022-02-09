@@ -5,7 +5,7 @@ const routerApi = require('./routes');
 const { logErrors, errorHandler, boomHandler } = require('./middlewares/error.handler');
 
 const app = express();
-// Agregando variable de entorno en Heroku
+// Evaluando la variable de entorno
 const port = process.env.ṔORT || 3000;
 
 app.use(express.json());
