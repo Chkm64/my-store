@@ -5,6 +5,7 @@ const routerApi = require('./routes');
 const { logErrors, errorHandler, boomHandler } = require('./middlewares/error.handler');
 
 const app = express();
+// Agregando variable de entorno en Heroku
 const port = proccess.env.ṔORT || 3000;
 
 app.use(express.json());
@@ -39,3 +40,4 @@ app.use(errorHandler);
 app.listen(port, ()=>{
   console.log('Escuchando el puerto '+ port);
 });
+
