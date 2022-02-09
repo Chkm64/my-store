@@ -6,7 +6,7 @@ const { logErrors, errorHandler, boomHandler } = require('./middlewares/error.ha
 
 const app = express();
 // Agregando variable de entorno en Heroku
-const port = proccess.env.ṔORT || 3000;
+const port = process.env.ṔORT || 3000;
 
 app.use(express.json());
 
