@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const routerApi = require('./routes');
 
-const { logErrors, errorHandler, boomHandler } = require('./middlewares/error.handler');
+const { logErrors, errorHandler, boomHandler, sequelizeHandler } = require('./middlewares/error.handler');
 
 const app = express();
 // Evaluando la variable de entorno
@@ -34,6 +34,7 @@ routerApi(app);
 
 app.use(logErrors);
 app.use(boomHandler);
+app.use(sequelizeHandler);
 app.use(errorHandler);
 
 

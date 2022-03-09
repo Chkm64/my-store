@@ -53,16 +53,6 @@ router.patch('/:id',
     }
   });
 
-// router.put('/:id', async (req, res)=>{
-//   const { id } = req.params;
-//   const body = req.body;
-//   res.status(200).json({
-//     message: 'Actualizado parcial',
-//     data : body,
-//     id
-//   });
-// });
-
 router.delete('/:id', async (req, res)=>{
   const { id } = req.params;
   const respuesta = await service.delete(id);
